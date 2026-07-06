@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "2000:2000"
+    env_file:
+      - .env
+    volumes:
+      - ./trust_data.json:/app/trust_data.json
+      - ./performance_data.json:/app/performance_data.json
+      - ./line_snapshots.json:/app/line_snapshots.json
+      - ./paper_bets.json:/app/paper_bets.json
+      - ./value_bets_latest.json:/app/value_bets_latest.json
+      - ./data/daily_bets.json:/app/data/daily_bets.json
+      - ./data/filter_stats.json:/app/data/filter_stats.json
+      - ./data/oddspapi_daily.json:/app/data/oddspapi_daily.json
+    restart: unless-stopped

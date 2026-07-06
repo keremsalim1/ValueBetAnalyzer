@@ -1,0 +1,35 @@
+# Gizli anahtarlar — ASLA commit etme
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+env/
+
+# Çalışma zamanı veri dosyaları (ilk çalıştırmada otomatik oluşur)
+trust_data.json
+performance_data.json
+line_snapshots.json
+paper_bets.json
+value_bets_latest.json
+disabled_markets.json
+data/
+
+# IDE / araçlar
+.vscode/
+.idea/
+*.swp
+.claude/
+tasks/
+
+# OS
+Thumbs.db
+.DS_Store
